@@ -1,0 +1,44 @@
+{
+  "name": "zego-injector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "version": "npm run format && git add -A src",
+    "prepublishOnly": "npm run test",
+    "prepare": "npm run build",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharkJar/zego-injector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SharkJar/zego-injector/issues"
+  },
+  "homepage": "https://github.com/SharkJar/zego-injector#readme",
+  "keywords": [],
+  "author": "Johnny.xu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.0",
+    "ts-jest": "^26.3.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "fast-safe-stringify": "^2.0.7",
+    "reflect-metadata": "^0.1.13"
+  }
+}
