@@ -122,10 +122,3 @@ class TestClassB{
 
 console.log(Factory.create<TestClassB>("TestClassB").log())
 ```
-
-### 配置文件格式
-```
-#这里是注释
-MYCONFIG=123
-MYITEM=12344
-```
