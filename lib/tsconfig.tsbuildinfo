@@ -172,33 +172,33 @@
         "affectsGlobalScope": true
       },
       "../src/core/initproperty.ts": {
-        "version": "9e74b9f20eda6ae737d03692e0b4b359ae4d07cf12946c7261ac226308e3f5ec",
+        "version": "e5e3860d072ab3df3759277a48fef5881682345b6bcca4c7e122651448780a74",
         "signature": "5c20a582a8d0885f63927415f841caf95bb9e7939f67d2fab93417dc1ae84aec",
         "affectsGlobalScope": false
       },
+      "../src/core/initparams.ts": {
+        "version": "9a4a6f22bf682a74f53ed8e86624ee42a46e8a63b63bd4678dce904e9ba9646e",
+        "signature": "351643ac48ace3b7d73cce6754edc03439128a686930149d9917fe25847e9889",
+        "affectsGlobalScope": false
+      },
       "../src/core/injector.ts": {
-        "version": "be0d0a5fb86691430a0e8aa4ffe7396f71378dd478733557df2b3b844abf2a21",
-        "signature": "4325b3229b142687b41d483efd78aa0ed5e4df9be09b1553a257915ecbaf4890",
+        "version": "d20cae26aec3413ae07d927593e043bf045ba26124fcdd44a55503ff8e417ea1",
+        "signature": "b44c2fa4d9fff4afd9e02a231d9afe22adfd0dd241b09d4b447e8013e28610c3",
         "affectsGlobalScope": false
       },
       "../src/paramdecorator.ts": {
-        "version": "0d4c538515a4630655f8740985d76274b2d7164471cb3b484192385ae0cd8430",
-        "signature": "071168d77d20661e65472278c4e987595db5c4a68c07fdd0f1c4871b9789597c",
+        "version": "aa249876a55ca9b7a5a67ad243cb4b1dcf771b400f73d16fd5a1efa67f3e2031",
+        "signature": "66047263261725b1d6197e25cfbd61ab0a4f6c16de82fa930c90227e2bd0951b",
         "affectsGlobalScope": false
       },
       "../src/propdecorator.ts": {
-        "version": "a6d2734a8493e885fb3fba40ec38310a01bb93951f4ca3fa01261d22cdf71db2",
+        "version": "a49242a770943ee79532f14e6f34d707f1866e358d1925770a937ff3acf5777f",
         "signature": "ecc46d760e8cf4143e6786ce29fc7eecc95772ad20d0e0cd6006fcdbb28e0046",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
         "version": "40483ddd12963452608f1933649c5a1c1130e59c9c951486155cd5607f95b2cd",
         "signature": "e74bdfceb3a907271b74d286c1c755dff758a18b2fd7d2c6efd0c913eea3ccf1",
-        "affectsGlobalScope": false
-      },
-      "../src/core/initparams.ts": {
-        "version": "cc1615199e6574c54a434cb7fb9a82aca64f614369d817704fc5f260e7074209",
-        "signature": "351643ac48ace3b7d73cce6754edc03439128a686930149d9917fe25847e9889",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -1744,6 +1744,7 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/reflect-metadata/index.d.ts",
         "../src/constan.ts",
+        "../src/core/initparams.ts",
         "../src/core/initproperty.ts"
       ],
       "../src/funcdecorator.ts": [

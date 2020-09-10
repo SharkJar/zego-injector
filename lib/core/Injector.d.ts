@@ -20,7 +20,9 @@ export declare class Factory {
     static useClass(params: useClassParams): void;
     static useValue(param: useValueParams): void;
     static useFactory(params: useFactoryParams): void;
-    static createConstructor<TOutput = any>(creator: constructor, provide?: any, inject?: any[]): any;
+    static createConstructor<TOutput = any>(creator: constructor | any, provide?: any, inject?: any[]): any;
     static createFactory<TOutput = any>(createFunction: Function, provide: any, inject?: any[]): any;
+    static getInstance<TOutput = any>(provide: any): any;
+    static create<TOutput = any>(creator: constructor | any): any;
 }
 export {};
