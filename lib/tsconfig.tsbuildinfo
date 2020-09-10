@@ -182,8 +182,8 @@
         "affectsGlobalScope": false
       },
       "../src/core/injector.ts": {
-        "version": "586c8534585c99d3311182d9d9cd2f049c686fa61a5da7af96a9cdc05d8e7bcb",
-        "signature": "b44c2fa4d9fff4afd9e02a231d9afe22adfd0dd241b09d4b447e8013e28610c3",
+        "version": "3590dce0af7fdb41066ecb22010bf473d4cc20e00d9d7102bd5a4fa3ef7cb4ac",
+        "signature": "80fe976e6f1139434c9a09b0a0593bc04b0564e1cef5977115caedf987fc8a3c",
         "affectsGlobalScope": false
       },
       "../src/paramdecorator.ts": {
