@@ -6,9 +6,8 @@
  */
 import { PROPERTY_DECORATOR } from './constan';
 
-
-type propertyFactory = { propertyName?: string,factory: Function,inject?: any[] }
-type propertyData = { propertyName?: string,data: any }
+type propertyFactory = { propertyName?: string; factory: Function; inject?: any[] };
+type propertyData = { propertyName?: string; data: any };
 /**
  * 帮助创建属性装饰器
  * @param options

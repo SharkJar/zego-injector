@@ -25,7 +25,7 @@ export const createParamDecorator = function (options: {
     // 必须是字典
     params = params instanceof Map ? params : new Map();
     // 方法参数字典
-    let queryMap:Map<number,any> = params.get(paramIndex) || new Map();
+    let queryMap: Map<number, any> = params.get(paramIndex) || new Map();
     // 告诉是第几个参数
     options.paramIndex = paramIndex;
     // 告诉是什么方法名称
@@ -33,9 +33,9 @@ export const createParamDecorator = function (options: {
     // 告诉当前参数是什么类型
     options.type = types[paramIndex];
     // 设置给方法字典
-    queryMap.set(paramIndex,options);
-    // 设置给constructor 
-    params.set(methodName,queryMap);
+    queryMap.set(paramIndex, options);
+    // 设置给constructor
+    params.set(methodName, queryMap);
     // 重新写入
     Reflect.defineMetadata(PARAM_DECORATOR, params, target.constructor);
   };
