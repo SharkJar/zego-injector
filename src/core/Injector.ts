@@ -2,7 +2,7 @@
  * @Author: Johnny.xushaojia
  * @Date: 2020-09-08 15:21:41
  * @Last Modified by: Johnny.xushaojia
- * @Last Modified time: 2020-09-10 17:22:07
+ * @Last Modified time: 2020-09-10 17:39:51
  */
 import 'reflect-metadata';
 import { PARAM_TYPES, INJECTABLE_DECORATOR } from '../constan';
@@ -147,11 +147,14 @@ class InjectHelper {
     const valueParams = params as useValueParams;
     const factoryParams = params as useFactoryParams;
 
-    if (typeof valueParams !== 'undefined') {
+    // 删除之前的声明以及实例
+    this.modules.delete(params.provide)
+
+    if (typeof valueParams.useValue !== 'undefined') {
       this.useValue(valueParams);
     } else if (typeof factoryParams.useFactory !== 'undefined') {
       this.useFactory(factoryParams);
-    } else if (typeof classParams !== 'undefined') {
+    } else if (typeof classParams.useClass !== 'undefined') {
       this.useClass(classParams);
     }
   }
@@ -299,7 +302,7 @@ export class Factory {
    * 如果已经被别的constructor实例化过的 就不会替换到，但是被createParamDecorator的部分 可以被动态拿到
    * @param params
    */
-  public useReplace(params: useClassParams | useValueParams | useFactoryParams) {
+  public static useReplace(params: useClassParams | useValueParams | useFactoryParams) {
     return Factory.instance.useReplace(params);
   }
 

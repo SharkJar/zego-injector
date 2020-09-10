@@ -198,4 +198,49 @@ describe('Injector test', () => {
 
     expect(Factory.create<TestClassB>(TestClassB).log()).toBe('By');
   });
+
+  it("Factory.useReplace",() => {
+    @Injectable()
+    class TestReplaceA {
+      sayBy() {
+        return 'By 1';
+      }
+    }
+
+    const GetTestA = function () {
+      return createParamDecorator({
+        factory(testA: any) {
+          return testA;
+        },
+        inject: [TestReplaceA],
+      });
+    };
+
+    @Injectable()
+    class TestReplaceB{
+      log(
+        @GetTestA()
+        testA:TestReplaceA
+      ){
+        return testA.sayBy()
+      }
+    }
+
+    const instance = Factory.create<TestReplaceB>(TestReplaceB)
+
+    expect(instance.log()).toBe('By 1');
+
+    // 替换一个module
+    // 只有被createParamDecorator 的会被动态替换
+    Factory.useReplace({
+      provide:TestReplaceA,
+      useFactory(){
+        return {
+          sayBy(){ return "By 2" }
+        }
+      }
+    })
+
+    expect(instance.log()).toBe('By 2');
+  })
 });
